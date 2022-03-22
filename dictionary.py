@@ -12,7 +12,7 @@ arr.append(3)
 assign = dict.fromkeys(val, arr)
 print(assign,)
 print("#3----------------")
-search = input("Available: fruit, soup, appetizer \n Search:")
+search = input("Available: fruit, soup, appetizer \n Search:").casefold()
 food = {
     "fruit": ["mango", "apple"],
     "soup": "Sinigang",
@@ -33,7 +33,7 @@ get_school = mydata.get("School")
 print(mydata)
 print(get_name.title(), get_school.upper())
 print("#5----------------")
-enter_model = input("What model you would like to get?")
+enter_model = input("What model you would like to get?").capitalize()
 laptop = {
     "brand": "HP",
     "year": 2017,

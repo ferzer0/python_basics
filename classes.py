@@ -92,7 +92,7 @@ class Patient:
 
 a1 = Patient("Josph", "Covd", 18)
 a1.edit_patient()
-print("#6----------------")
+print("#7----------------")
 class Country:
     def __init__(self, city, country):
         self.city = city

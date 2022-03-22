@@ -49,12 +49,12 @@ def time():
     finally:
         print(total_date, " ", total_date2)
 time()
-print("#5----------------") #error handling
+print("#5----------------") 
 enter_num = input("Enter number 1-5:")
 convert_num = int(enter_num)
 def func(nums):
     try:
-        i = nums
+        i = nums #iteration
         while i <= 5:
             print(i, "Hello")
             x = nums
@@ -79,7 +79,6 @@ def func2():
 func2()
 print("#7----------------")
 input_num = input("Enter a number:")
-
 input_num2 = input("Enter a 2nd number:")
 
 

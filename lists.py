@@ -3,8 +3,8 @@ animals = ["dogs", "cats", "monkeys"]
 print(animals[0] + " are cute!")
 print("#2--------------------")
 numbers = [1, 5]
-c = len(numbers)
-sum = numbers[0] + numbers[1] + c
+count_array = len(numbers)
+sum = numbers[0] + numbers[1] + count_array
 print(sum)
 print("#3--------------------")
 dogs = ["Yin", "Yang", "Oreo"]

@@ -17,7 +17,7 @@ for check_a in animals2:
         print(check_a, check_c)
 print("#4----------------") #add capital or small letter
 mindanao = ["Butuan City", "Davao City", "Gensan City", "Surigao City"]
-check_city = input("Enter a city: ")
+check_city = input("Enter a city: ").title()
 for city in mindanao:
     if check_city == city:
         print(check_city, "is one of the cities in mindanao")
@@ -37,7 +37,7 @@ for num_check in num:
         if num_check == 3 and num2_check == 4:
             print(outer + inner)
 print("#6----------------")
-enter_name = input("Enter subject for grade results: ")
+enter_name = input("Enter subject for grade results: ").capitalize()
 grade = {"Math":74, "Science": 91, "Computer": 99}
 
 for check_grade in grade:

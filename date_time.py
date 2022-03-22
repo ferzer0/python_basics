@@ -25,7 +25,6 @@ passed = current + past
 print(passed)
 print('#7-------------')
 get_time = datetime.datetime(2018, 6, 1)
-
 print(get_time.strftime("%C"))
 
 

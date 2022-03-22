@@ -16,16 +16,16 @@ number_to_increment = 3
 num6 += number_to_increment
 print(num6)
 print("#4-------------")
-name = input("Enter name: ")
+name = input("Enter name: ").capitalize()
 name1 = "Fernan"
-name2 = "fernan"
-if name == name1 or name:
-    print("you are authorized Mr.", name.capitalize())
+
+if name == name1:
+    print("you are authorized Mr.", name)
 else:
     print("You are not authorized!")
 print("#5-------------")
-enter = input("Enter between 1-10 a number:")
-entered = int(enter)
+enter_num = input("Enter between 1-10 a number:")
+entered = int(enter_num)
 
 if 0 < entered <= 10:
     print("Entered the right number which is", entered)
@@ -48,7 +48,7 @@ age = input("Enter age: ")
 conv_num = int(age)
 place_resident = input("Enter Country:")
       
-if (conv_num < 65 or conv_num > 21) and place_resident == "Philippines":
+if (conv_num < 65 and conv_num >= 21) and place_resident == "Philippines":
     print("You're legally allowed travelling outside Philippines")
 else:
     print("Sorry you're not allowed to travel")

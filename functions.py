@@ -16,7 +16,7 @@ def math_solve(num, num2, num3=2):
     calc = num * (num2 + num3)
     print(calc)
 math_solve(num2=3, num=2)
-print("#4----------------") #captilized or small letter
+print("#4----------------") 
 subject = ["Math", "Science", "English", "Filipino"]
 grade = [89, 90, 77, 99]
 
@@ -37,13 +37,17 @@ def my_func2(**get_name):
     arr = [get_name["name"], get_name["name3"], get_name["name2"]]
     print(arr)
 my_func2(name="Tim", name2="Henry", name3="Sarah")
-print("#7----------------")#error string
+print("#7----------------")
 def get_num(num, num2):
-    return num + num2
+    try:
+        conv_ent = int(num)
+        conv_ent2 = int(num2)
+        return conv_ent + conv_ent2
+    except ValueError:
+        print("Wrong Input!")
 
 ent = input("Enter first number: ")
 ent2 = input("Enter second number: ")
-conv_ent = int(ent)
-conv_ent2 = int(ent2)
-g_num= get_num(conv_ent, conv_ent2)
+
+g_num= get_num(ent, ent2)
 print(g_num)
