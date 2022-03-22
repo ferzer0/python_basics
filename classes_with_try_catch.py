@@ -102,3 +102,26 @@ input_grade = input("Enter grade: ")
 sub1 = Subjects(input_name.title(), input_sub.title(), int(input_grade))
 sub1.get_card()
 print("#5----------------")
+class Grade:
+    def __init__(self, subject):
+        self.subject = subject
+        
+    
+    def check_grade(self):
+        
+        try:
+            subs = self.subject
+            grades = {"Math":74, "Science": 91, "Computer": 99}
+
+            for grade in grades:
+                if grade== subs:
+                    print(grades[grade])
+        except IndexError:
+            print("Invalid Subject")
+        except:
+            print("Invalid Error")
+
+input_subject = input("Enter subject for grade results: ").capitalize()
+g1 = Grade(input_subject)
+g1.check_grade()
+        
