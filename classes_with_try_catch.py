@@ -6,6 +6,7 @@ class Checker:
     def check(self):
         validator = {"y":"yes", "n":"no"}
         try:
+            
             x = validator[self.enter]
             print(x)
         except KeyError:
@@ -24,20 +25,25 @@ class Sum:
         self.num2 = num2 
     
     def calc(self):
-        sum = self.num1 + self.num2
-        if sum <= 100:
-            result = sum
+        
         try:
+            a = int(self.num1)
+            b = int(self.num2)
+            sum = a + b
+            if sum <= 100:
+                result = sum
             print("Result: ", result)
+        except ValueError:
+            print("Invalid Input")
         except:
             print("Number exceeded to 100")
 
 enter = input("Input first number:")
-conv_enter = int(enter)
-enter2 = input("Input second number:")
-conv_enter2 = int(enter2)
 
-solve = Sum(conv_enter, conv_enter2)
+enter2 = input("Input second number:")
+
+
+solve = Sum(enter, enter2)
 solve.calc()
 print("#3----------------")
 class Array:
@@ -58,7 +64,7 @@ class Array:
             print(self.f_array, "Didn't exist")
             
 
-find = input("Search for animals if it's available: ")
+find = input("Search for animals if it's available: ").casefold()
 a1 = Array(find)
 a1.check_array()
 print("#4----------------")
@@ -71,8 +77,7 @@ class Subjects:
     def get_card(self):
         name = self.name
         grade = self.grade
-        sub = self.sub     
-        
+        sub = self.sub           
          
         try:
             if 100 >= grade >= 92:
@@ -83,8 +88,9 @@ class Subjects:
                 print(name, "Grade C at subject", sub)
             elif 80 >= grade >= 75:
                 print(name, "Grade D at subject", sub)
-            
-        except:
+            else:
+                print("invalid input!")
+        except :
             print("Grade Failed!")          
         finally:
             print("final grade:", grade)
